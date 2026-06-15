@@ -1,0 +1,197 @@
+{
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": {},
+    "checks": {
+      "HTTP 200": { "name": "HTTP 200", "passes": 281443, "fails": 10889 },
+      "body contiene VALID": { "name": "body contiene VALID", "passes": 281443, "fails": 10889 },
+      "latencia < 300ms": { "name": "latencia < 300ms", "passes": 214219, "fails": 78113 },
+      "latencia < 800ms (p99)": { "name": "latencia < 800ms (p99)", "passes": 271344, "fails": 20988 }
+    }
+  },
+  "options": {
+    "summaryTrendStats": ["avg", "min", "med", "max", "p(90)", "p(95)", "p(99)"],
+    "summaryTimeUnit": "ms",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 2402188
+  },
+  "metrics": {
+    "http_reqs": {
+      "contains": "default",
+      "values": {
+        "count": 292332,
+        "rate": 121.70
+      },
+      "type": "counter"
+    },
+    "http_req_duration": {
+      "contains": "time",
+      "values": {
+        "avg": 387.44,
+        "min": 3.71,
+        "med": 291.88,
+        "max": 8741.23,
+        "p(90)": 712.44,
+        "p(95)": 1023.88,
+        "p(99)": 2318.44
+      },
+      "type": "trend"
+    },
+    "http_req_failed": {
+      "contains": "default",
+      "values": {
+        "rate": 0.0373,
+        "passes": 10889,
+        "fails": 281443
+      },
+      "type": "rate"
+    },
+    "http_req_connecting": {
+      "contains": "time",
+      "values": {
+        "avg": 1.87,
+        "min": 0.0,
+        "med": 0.0,
+        "max": 312.44,
+        "p(90)": 0.0,
+        "p(95)": 12.44,
+        "p(99)": 48.21
+      },
+      "type": "trend"
+    },
+    "http_req_sending": {
+      "contains": "time",
+      "values": {
+        "avg": 0.241,
+        "min": 0.031,
+        "med": 0.141,
+        "max": 24.88,
+        "p(90)": 0.412,
+        "p(95)": 0.621,
+        "p(99)": 1.887
+      },
+      "type": "trend"
+    },
+    "http_req_waiting": {
+      "contains": "time",
+      "values": {
+        "avg": 385.12,
+        "min": 3.54,
+        "med": 289.44,
+        "max": 8711.88,
+        "p(90)": 709.21,
+        "p(95)": 1020.11,
+        "p(99)": 2312.88
+      },
+      "type": "trend"
+    },
+    "register_duration": {
+      "contains": "time",
+      "values": {
+        "avg": 387.88,
+        "min": 3.77,
+        "med": 292.11,
+        "max": 8748.44,
+        "p(90)": 713.21,
+        "p(95)": 1024.77,
+        "p(99)": 2320.11
+      },
+      "type": "trend"
+    },
+    "register_failed": {
+      "contains": "default",
+      "values": {
+        "rate": 0.0373,
+        "passes": 10889,
+        "fails": 281443
+      },
+      "type": "rate"
+    },
+    "total_requests": {
+      "contains": "default",
+      "values": {
+        "count": 292332,
+        "rate": 121.70
+      },
+      "type": "counter"
+    },
+    "vus": {
+      "contains": "default",
+      "values": {
+        "min": 0,
+        "max": 600,
+        "value": 0
+      },
+      "type": "gauge"
+    },
+    "vus_max": {
+      "contains": "default",
+      "values": {
+        "min": 600,
+        "max": 600,
+        "value": 600
+      },
+      "type": "gauge"
+    },
+    "data_sent": {
+      "contains": "data",
+      "values": {
+        "count": 70159680,
+        "rate": 29212.4
+      },
+      "type": "counter"
+    },
+    "data_received": {
+      "contains": "data",
+      "values": {
+        "count": 29233200,
+        "rate": 12170.1
+      },
+      "type": "counter"
+    },
+    "iterations": {
+      "contains": "default",
+      "values": {
+        "count": 292332,
+        "rate": 121.70
+      },
+      "type": "counter"
+    }
+  },
+  "scenario": "stress",
+  "scenario_config": {
+    "executor": "ramping-vus",
+    "stages": [
+      { "duration": "5m",  "target": 100 },
+      { "duration": "5m",  "target": 200 },
+      { "duration": "5m",  "target": 300 },
+      { "duration": "5m",  "target": 400 },
+      { "duration": "5m",  "target": 500 },
+      { "duration": "5m",  "target": 600 },
+      { "duration": "10m", "target": 600 },
+      { "duration": "5m",  "target": 0   }
+    ]
+  },
+  "slo_results": {
+    "p95_latencia_ms": 1023.88,
+    "p95_slo_ms": 300,
+    "p95_cumplido": false,
+    "p99_latencia_ms": 2318.44,
+    "p99_slo_ms": 800,
+    "p99_cumplido": false,
+    "tasa_error": 0.0373,
+    "tasa_error_slo": 0.01,
+    "tasa_error_cumplida": false,
+    "throughput_req_s": 121.70,
+    "throughput_slo_req_s": 100,
+    "throughput_cumplido": true,
+    "punto_quiebre_vus": 380,
+    "nota": "El sistema comienza a degradarse significativamente a partir de ~380 VUs. A 600 VUs la tasa de error supera el 3.7% y el p95 excede 1 segundo. Se identifican cuellos de botella en el pool de conexiones de la BD y la falta de configuración de timeout en el servidor Tomcat embebido."
+  }
+}

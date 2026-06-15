@@ -1,0 +1,206 @@
+{
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": {},
+    "checks": {
+      "HTTP 200": { "name": "HTTP 200", "passes": 186341, "fails": 411 },
+      "body contiene VALID": { "name": "body contiene VALID", "passes": 186341, "fails": 411 },
+      "latencia < 300ms": { "name": "latencia < 300ms", "passes": 181892, "fails": 4860 },
+      "latencia < 800ms (p99)": { "name": "latencia < 800ms (p99)", "passes": 186198, "fails": 554 }
+    }
+  },
+  "options": {
+    "summaryTrendStats": ["avg", "min", "med", "max", "p(90)", "p(95)", "p(99)"],
+    "summaryTimeUnit": "ms",
+    "noColor": false
+  },
+  "state": {
+    "isStdOutTTY": true,
+    "isStdErrTTY": true,
+    "testRunDurationMs": 1800412
+  },
+  "metrics": {
+    "http_reqs": {
+      "contains": "default",
+      "values": {
+        "count": 186752,
+        "rate": 103.75
+      },
+      "type": "counter"
+    },
+    "http_req_duration": {
+      "contains": "time",
+      "values": {
+        "avg": 84.32,
+        "min": 3.88,
+        "med": 61.44,
+        "max": 1243.87,
+        "p(90)": 198.31,
+        "p(95)": 267.44,
+        "p(99)": 512.88
+      },
+      "type": "trend"
+    },
+    "http_req_failed": {
+      "contains": "default",
+      "values": {
+        "rate": 0.0022,
+        "passes": 411,
+        "fails": 186341
+      },
+      "type": "rate"
+    },
+    "http_req_connecting": {
+      "contains": "time",
+      "values": {
+        "avg": 0.31,
+        "min": 0.0,
+        "med": 0.0,
+        "max": 48.21,
+        "p(90)": 0.0,
+        "p(95)": 0.0,
+        "p(99)": 3.41
+      },
+      "type": "trend"
+    },
+    "http_req_sending": {
+      "contains": "time",
+      "values": {
+        "avg": 0.134,
+        "min": 0.031,
+        "med": 0.098,
+        "max": 12.44,
+        "p(90)": 0.231,
+        "p(95)": 0.341,
+        "p(99)": 0.887
+      },
+      "type": "trend"
+    },
+    "http_req_waiting": {
+      "contains": "time",
+      "values": {
+        "avg": 83.98,
+        "min": 3.71,
+        "med": 61.11,
+        "max": 1238.44,
+        "p(90)": 197.88,
+        "p(95)": 266.81,
+        "p(99)": 511.44
+      },
+      "type": "trend"
+    },
+    "http_req_receiving": {
+      "contains": "time",
+      "values": {
+        "avg": 0.208,
+        "min": 0.031,
+        "med": 0.144,
+        "max": 18.77,
+        "p(90)": 0.433,
+        "p(95)": 0.612,
+        "p(99)": 1.443
+      },
+      "type": "trend"
+    },
+    "register_duration": {
+      "contains": "time",
+      "values": {
+        "avg": 84.41,
+        "min": 3.91,
+        "med": 61.53,
+        "max": 1247.11,
+        "p(90)": 198.54,
+        "p(95)": 267.88,
+        "p(99)": 513.44
+      },
+      "type": "trend"
+    },
+    "register_failed": {
+      "contains": "default",
+      "values": {
+        "rate": 0.0022,
+        "passes": 411,
+        "fails": 186341
+      },
+      "type": "rate"
+    },
+    "total_requests": {
+      "contains": "default",
+      "values": {
+        "count": 186752,
+        "rate": 103.75
+      },
+      "type": "counter"
+    },
+    "vus": {
+      "contains": "default",
+      "values": {
+        "min": 0,
+        "max": 200,
+        "value": 0
+      },
+      "type": "gauge"
+    },
+    "vus_max": {
+      "contains": "default",
+      "values": {
+        "min": 200,
+        "max": 200,
+        "value": 200
+      },
+      "type": "gauge"
+    },
+    "data_sent": {
+      "contains": "data",
+      "values": {
+        "count": 44820480,
+        "rate": 24900.3
+      },
+      "type": "counter"
+    },
+    "data_received": {
+      "contains": "data",
+      "values": {
+        "count": 18675200,
+        "rate": 10375.1
+      },
+      "type": "counter"
+    },
+    "iterations": {
+      "contains": "default",
+      "values": {
+        "count": 186752,
+        "rate": 103.75
+      },
+      "type": "counter"
+    }
+  },
+  "scenario": "load",
+  "scenario_config": {
+    "executor": "ramping-vus",
+    "stages": [
+      { "duration": "5m", "target": 50  },
+      { "duration": "5m", "target": 100 },
+      { "duration": "5m", "target": 200 },
+      { "duration": "10m","target": 200 },
+      { "duration": "5m", "target": 0   }
+    ]
+  },
+  "slo_results": {
+    "p95_latencia_ms": 267.44,
+    "p95_slo_ms": 300,
+    "p95_cumplido": true,
+    "p99_latencia_ms": 512.88,
+    "p99_slo_ms": 800,
+    "p99_cumplido": true,
+    "tasa_error": 0.0022,
+    "tasa_error_slo": 0.01,
+    "tasa_error_cumplida": true,
+    "throughput_req_s": 103.75,
+    "throughput_slo_req_s": 100,
+    "throughput_cumplido": true,
+    "nota": "Todos los SLOs cumplidos bajo carga de 200 VUs. Se observa degradación progresiva en p95 al llegar a 200 usuarios (267ms vs 52ms en baseline)."
+  }
+}
