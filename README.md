@@ -9,6 +9,7 @@ Integrantes:
 - Andrés Meneses Ortega
 - David Hernando Monsalve
 - Sergio Cruz Triana
+- Hermes Alexander Patichoy Calpa
 
 
 # NOTA: Toda la documentación en la WIKI del repositorio
@@ -324,7 +325,12 @@ Jenkinsfile
 
 ---
 
-# Autor
+# Autores
+
+- Andrés Meneses Ortega
+- David Hernando Monsalve
+- Sergio Cruz Triana
+- Hermes Alexander Patichoy Calpa
 
 Proyecto desarrollado como ejercicio práctico de:
 
