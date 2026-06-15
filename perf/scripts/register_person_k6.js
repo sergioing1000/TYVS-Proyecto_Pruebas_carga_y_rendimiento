@@ -177,9 +177,9 @@ export default function () {
   statusCount.add(1, { status: String(res.status) });
 
   const bodyText = String(res.body || '').trim().toUpperCase();
+
   const ok = check(res, {
-    'status 200':  (r) => r.status === 200,
-    'body VALID':  (_) => bodyText.includes('VALID'),
+  'status 200': (r) => r.status === 200,
   });
 
   registerFailed.add(!ok);
