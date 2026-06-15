@@ -11,5 +11,5 @@ Integrantes:
 - Sergio Cruz Triana
 
 
-# NOTA: Toda la documentación en la WIKI del repositorio <img width="63" height="37" alt="image" src="https://github.com/user-attachments/assets/8b3e84ba-cd4d-464a-96c9-e5522cf71ce7" />
+# NOTA: Toda la documentación en la WIKI del repositorio
 
