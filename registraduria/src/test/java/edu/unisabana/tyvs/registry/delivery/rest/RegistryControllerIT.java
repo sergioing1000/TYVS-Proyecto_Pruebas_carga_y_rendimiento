@@ -1,5 +1,6 @@
-// src/test/java/edu/unisabana/tyvs/registry/delivery/rest/RegistryControllerIT.java
 package edu.unisabana.tyvs.registry.delivery.rest;
+
+import edu.unisabana.tyvs.registry.RegistryApplication;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,9 +14,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import edu.unisabana.tyvs.registry.application.port.out.RegistryRepositoryPort;
 
-// src/test/java/.../RegistryControllerIT.java
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+    classes = RegistryApplication.class,
+    webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+)
 public class RegistryControllerIT {
 
     @TestConfiguration
